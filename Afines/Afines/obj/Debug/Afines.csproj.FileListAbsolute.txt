@@ -8,3 +8,13 @@ C:\Users\anast\source\repos\Afines\Afines\obj\Debug\Afines.csproj.GenerateResour
 C:\Users\anast\source\repos\Afines\Afines\obj\Debug\Afines.csproj.CoreCompileInputs.cache
 C:\Users\anast\source\repos\Afines\Afines\obj\Debug\Afines.exe
 C:\Users\anast\source\repos\Afines\Afines\obj\Debug\Afines.pdb
+C:\Users\osipy\Projects\Afines\Afines\Afines\bin\Debug\Afines.exe.config
+C:\Users\osipy\Projects\Afines\Afines\Afines\bin\Debug\Afines.exe
+C:\Users\osipy\Projects\Afines\Afines\Afines\bin\Debug\Afines.pdb
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.csproj.AssemblyReference.cache
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.Form1.resources
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.Properties.Resources.resources
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.csproj.GenerateResource.cache
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.csproj.CoreCompileInputs.cache
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.exe
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.pdb

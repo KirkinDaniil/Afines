@@ -16,16 +16,17 @@ namespace Afines
         DrawPoint,
         DrawEdge,
         DrawSquare,
+        DrawPolygon
     }
 
     public partial class Form1 : Form
     {
         private DrawingState _drawingState;
         private Graphics graphic;
-        private bool Start;
+
         private Point point;
-        private Edge edge;
         private Pen pen;
+        private Polygon _polygon = new Polygon();
         public Form1()
         {
             InitializeComponent();
@@ -40,34 +41,40 @@ namespace Afines
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             graphic.Clear(Color.White);
-
-            if (_drawingState == DrawingState.DrawEdge)
+            switch (_drawingState)
             {
-                if (Start)
-                {
-                    Edge edge = new Edge((point.X, point.Y), (e.Location.X, e.Location.Y));
-                    edge.DrawEdge(graphic, pen);
-                }
-                else 
-                {
-                    point = e.Location;
-                }
+                case DrawingState.Default:
+                    break;
+                case DrawingState.DrawPoint:
+                    //point = e.Location;
+                    //Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                    //bmp.SetPixel(point.X, point.Y, pen.Color);
+                    //pictureBox1.Image = bmp;
+                    break;
+                case DrawingState.DrawEdge:
+                    //if (Start)
+                    //{
+                    //    Edge edge = new Edge((point.X, point.Y), (e.Location.X, e.Location.Y));
+                    //    edge.DrawEdge(graphic, pen);
+                    //}
+                    //else
+                    //{
+                    //    point = e.Location;
+                    //}
 
-                Start = !Start;
+                    //Start = !Start;
+                    break;
+                case DrawingState.DrawSquare:
+                    break;
+                case DrawingState.DrawPolygon:
+                    graphic.Clear(Color.White);
+                    _polygon.AddPoint(e.X,e.Y);
+                    _polygon.Draw(graphic,pen);
+                    break;
+                default:
+                    break;
             }
 
-            else if(_drawingState == DrawingState.DrawPoint)
-            {
-                point = e.Location;
-                Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-                bmp.SetPixel(point.X, point.Y, pen.Color);
-                pictureBox1.Image = bmp;
-            } 
-
-            else if(_drawingState == DrawingState.DrawSquare)
-            {
-
-            }
         }
 
         private void pointDrawer_Click(object sender, EventArgs e)
@@ -76,16 +83,11 @@ namespace Afines
             _drawingState = DrawingState.DrawPoint;
         }
 
-        private void edgeDrawer_Click(object sender, EventArgs e)
-        {
-            graphic.Clear(Color.White);
-            _drawingState = DrawingState.DrawEdge;
-        }
 
-        private void squareDrawer_Click(object sender, EventArgs e)
+        private void polygonDrawer_Click(object sender, EventArgs e)
         {
             graphic.Clear(Color.White);
-            _drawingState = DrawingState.DrawSquare;
+            _drawingState = DrawingState.DrawPolygon;
         }
     }
 }

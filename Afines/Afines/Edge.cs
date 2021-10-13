@@ -9,10 +9,10 @@ namespace Afines
 {
     public class Edge
     {
-        public (double X, double Y) firstPoint { get; set; }
-        public (double X, double Y) secondPoint { get; set; }
+        public Afines.Point firstPoint { get; set; }
+        public Afines.Point secondPoint { get; set; }
 
-        public Edge((double, double) _first, (double, double) _second)
+        public Edge(Afines.Point _first, Afines.Point _second)
         {
             firstPoint = _first;
             secondPoint = _second;
