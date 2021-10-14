@@ -15,7 +15,8 @@ namespace Afines
         DrawPoint,
         DrawEdge,
         DrawSquare,
-        DrawPolygon
+        DrawPolygon,
+        Draw2Edge
     }
 
     public partial class Form1 : Form
@@ -25,6 +26,7 @@ namespace Afines
         private Pen _pen;
         private Polygon _polygon = new Polygon();
         private Point _point = new Point(0,0);
+        private _2Edges _2edges;
         private Point CenterPoint
         {
             get
@@ -45,6 +47,7 @@ namespace Afines
         {
             _graphic = pictureBox1.CreateGraphics();
             _pen = new Pen(Color.Black);
+            _2edges = new _2Edges();
             ControlExtension.Draggable(MovingPoint, true);
         }
 
@@ -65,6 +68,12 @@ namespace Afines
                     _graphic.Clear(Color.White);
                     _polygon.AddPoint(e.X,e.Y);
                     _polygon.Draw(_graphic,_pen);
+                    break;
+                case DrawingState.Draw2Edge:
+                    _graphic.Clear(Color.White);
+                    _polygon.Clear();
+                    _2edges.AddPoint(e.X, e.Y);
+                    _2edges.Draw(_graphic, _pen);
                     break;
                 default:
                     break;
@@ -126,6 +135,11 @@ namespace Afines
             _graphic.Clear(Color.White);
             _polygon.Clear();
             _drawingState = DrawingState.Default;
+        }
+
+        private void Intersect_Click(object sender, EventArgs e)
+        {
+            _drawingState = DrawingState.Draw2Edge;
         }
     }
 }

@@ -9,6 +9,11 @@
             X = x;
             Y = y;
         }
+        public Point()
+        {
+            X = 0;
+            Y = 0;
+        }
         public Matrix GetMatrix()
         {
             return new Matrix(new double[,] { { X, Y, 1 } });

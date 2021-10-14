@@ -72,5 +72,56 @@ namespace Afines
             }
             */
         }
+        public static bool IsBetween(double a, double b,double c)
+        {
+            return Math.Min(a, b) <= c && Math.Max(a, b) >= c;
+        }
+        public static Afines.Point IntersectionPoint(Edge e1, Edge e2)
+        {
+            double x1 = e1.firstPoint.X,
+                x2 = e1.secondPoint.X,
+                x3 = e2.firstPoint.X,
+                x4 = e2.secondPoint.X;
+
+            double y1 = e1.firstPoint.Y,
+                 y2 = e1.secondPoint.Y,
+                 y3 = e2.firstPoint.Y,
+                 y4 = e2.secondPoint.Y;
+
+            double n;
+            if (y2 - y1 != 0)
+            {  // a(y)
+                double q = (x2 - x1) / (y1 - y2);
+                double sn = (x3 - x4) + (y3 - y4) * q; 
+                if (sn == 0) 
+                { 
+                    return null; 
+                }  // c(x) + c(y)*q
+                double fn = (x3 - x1) + (y3 - y1) * q;   // b(x) + b(y)*q
+                n = fn / sn;
+            }
+            else
+            {
+                if (y3 == y4) 
+                { 
+                    return null; 
+                }  // b(y)
+                n = (y3 - y1) / (y3 - y4);   // c(y)/b(y)
+            }
+            double ansX = x3 + (x4 - x3) * n;  // x3 + (-b(x))*n
+            double ansY = y3 + (y4 - y3) * n;  // y3 +(-b(y))*n
+
+            if (IsBetween(x1,x2,ansX) && IsBetween(y1,y2,ansY) 
+                && IsBetween(x3, x4, ansX) && IsBetween(y3, y4, ansY))
+            {
+                return new Point(ansX, ansY);
+            }
+            else
+            {
+                return null;
+            }
+            
+
+        }
     }
 }

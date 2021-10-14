@@ -42,6 +42,7 @@
             this.ScaleScroll = new System.Windows.Forms.HScrollBar();
             this.label5 = new System.Windows.Forms.Label();
             this.Clear = new System.Windows.Forms.Button();
+            this.Intersect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,11 +170,22 @@
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
+            // Intersect
+            // 
+            this.Intersect.Location = new System.Drawing.Point(11, 473);
+            this.Intersect.Name = "Intersect";
+            this.Intersect.Size = new System.Drawing.Size(75, 35);
+            this.Intersect.TabIndex = 17;
+            this.Intersect.Text = "intersect";
+            this.Intersect.UseVisualStyleBackColor = true;
+            this.Intersect.Click += new System.EventHandler(this.Intersect_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 627);
+            this.Controls.Add(this.Intersect);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ScaleScroll);
@@ -211,6 +223,7 @@
         private System.Windows.Forms.HScrollBar ScaleScroll;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button Intersect;
     }
 }
 
