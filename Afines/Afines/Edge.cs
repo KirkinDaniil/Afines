@@ -40,6 +40,8 @@ namespace Afines
 
         public void DrawEdge(Graphics g, Pen p)
         {
+            g.DrawLine(p, (int)firstPoint.X, (int)firstPoint.Y, (int)secondPoint.X, (int)secondPoint.Y);
+            /*
             int x0 = (int)firstPoint.X;
             int y0 = (int)firstPoint.Y;
             int x1 = (int)secondPoint.X;
@@ -68,6 +70,7 @@ namespace Afines
                 DrawPoint(g, steep, x, (int)y + 1, y - (int)y);
                 y += gradient;
             }
+            */
         }
     }
 }

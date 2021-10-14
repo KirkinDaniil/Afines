@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace Afines
 {
-
     public class Polygon
     {
         private List<Edge> _edges;
@@ -41,6 +40,33 @@ namespace Afines
                 new Edge(_points[0],_points[_points.Count - 1]).DrawEdge(g,p);
             }
             
+        }
+        public void Clear()
+        {
+            _points = new List<Point>();
+            _edges = new List<Edge>();
+            _lastPoint = null;
+        }
+        public void AfineShift(double dx,double dy)
+        {
+            foreach (var item in _points)
+            {
+                item.AfineShift(dx, dy);
+            }
+        }
+        public void AfineRotate(double angle,double x, double y)
+        {
+            foreach (var item in _points)
+            {
+                item.AfineRotate(angle,x,y);
+            }
+        }
+        public void AfineScale(double coef,double x,double y)
+        {
+            foreach (var item in _points)
+            {
+                item.AfineScale(coef, x, y);
+            }
         }
     }
 }

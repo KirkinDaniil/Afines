@@ -18,3 +18,5 @@ C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.csproj.GenerateRes
 C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.csproj.CoreCompileInputs.cache
 C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.exe
 C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.pdb
+C:\Users\osipy\Projects\Afines\Afines\Afines\bin\Debug\Control.Draggable.dll
+C:\Users\osipy\Projects\Afines\Afines\Afines\obj\Debug\Afines.csproj.CopyComplete
