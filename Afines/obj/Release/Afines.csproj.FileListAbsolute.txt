@@ -1,0 +1,9 @@
+C:\Users\anast\source\repos\Afines\bin\Release\Afines.exe.config
+C:\Users\anast\source\repos\Afines\bin\Release\Afines.exe
+C:\Users\anast\source\repos\Afines\bin\Release\Afines.pdb
+C:\Users\anast\source\repos\Afines\obj\Release\Afines.Form1.resources
+C:\Users\anast\source\repos\Afines\obj\Release\Afines.Properties.Resources.resources
+C:\Users\anast\source\repos\Afines\obj\Release\Afines.csproj.GenerateResource.cache
+C:\Users\anast\source\repos\Afines\obj\Release\Afines.csproj.CoreCompileInputs.cache
+C:\Users\anast\source\repos\Afines\obj\Release\Afines.exe
+C:\Users\anast\source\repos\Afines\obj\Release\Afines.pdb
